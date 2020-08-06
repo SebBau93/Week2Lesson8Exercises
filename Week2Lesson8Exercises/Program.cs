@@ -8,13 +8,19 @@ namespace Week2Lesson8Exercises
         {
             #region Exercise 1
 
-            Exercise1();
+            //Exercise1();
 
             #endregion
 
             #region Exercise 2
 
-            Exercise2();
+            //Exercise2();
+
+            #endregion
+
+            #region Exercise 3
+
+            Exercise3();
 
             #endregion
 
@@ -23,12 +29,12 @@ namespace Week2Lesson8Exercises
         private static void Exercise1()
         {
             bool isPrimeNumber = true;
+            int primeCounter = 0;
 
             for(int i = 0; i <= 100; i++)
             {
                 if (i == 0 || i == 1)
                 {
-                    Console.WriteLine($"{i} isn't a prime number.");
                     continue;
                 }
 
@@ -42,12 +48,12 @@ namespace Week2Lesson8Exercises
                 }
 
                 if (isPrimeNumber)
-                    Console.WriteLine($"{i} is a prime number.");
-                else
-                    Console.WriteLine($"{i} isn't a prime number.");
+                    primeCounter++;
 
                 isPrimeNumber = true;
             }
+
+            Console.WriteLine($"For range 0 - 100 are {primeCounter} numbers.");
         }
 
         private static void Exercise2()
@@ -57,12 +63,28 @@ namespace Week2Lesson8Exercises
             do
             {
                 if (value % 2 == 0)
-                    Console.WriteLine($"{value} is even.");
-                else
-                    Console.WriteLine($"{value} is odd.");
+                    Console.WriteLine(value);
 
                 value++;
             } while (value <= 1000);
+        }
+
+        private static void Exercise3()
+        {
+            Console.WriteLine("0");
+            Console.WriteLine("1");
+
+            int previousValue = 0;
+
+            for(int i = 1; i < 10000; i++)
+            {
+
+                int sum = i + previousValue;
+
+                Console.WriteLine(sum);
+
+                previousValue = sum;
+            }
         }
     }
 }
