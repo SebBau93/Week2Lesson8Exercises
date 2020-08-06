@@ -11,6 +11,13 @@ namespace Week2Lesson8Exercises
             Exercise1();
 
             #endregion
+
+            #region Exercise 2
+
+            Exercise2();
+
+            #endregion
+
         }
 
         private static void Exercise1()
@@ -41,6 +48,21 @@ namespace Week2Lesson8Exercises
 
                 isPrimeNumber = true;
             }
+        }
+
+        private static void Exercise2()
+        {
+            int value = 0;
+
+            do
+            {
+                if (value % 2 == 0)
+                    Console.WriteLine($"{value} is even.");
+                else
+                    Console.WriteLine($"{value} is odd.");
+
+                value++;
+            } while (value <= 1000);
         }
     }
 }
